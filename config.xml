@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<DBName>OracleFactory</DBName>
+	<className>DogAdapter</className>
+	<className1>Adapter</className1>
+	<className2>PcfactoryandMacFactory.MacFactory</className2>
+	<className3>Red</className3>
+	<className3>BigPen</className3>
+</config>

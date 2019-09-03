@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<style>
+		.td{width:100px;overflow:hidden}
+		.button{
+            background: plum;
+            color: greenyellow;
+            border: 1px solid dodgerblue;
+            transition-duration: 1s;/*过渡时间*/
+            border-radius: 12px;
+            padding: 8px 70px;
+            margin-top: 20px;
+            outline-style: none;/*去除点击时外部框线*/
+
+		}
+	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor=#FFF2CD><center>
+<%
+	String username = (String)application.getAttribute("username");
+	request.setAttribute("username", username);
+%>
+<form action="StudentServlet" name="form" method="post">
+	<br>请输入你要修改的信息，（学号，成绩不可修改）：
+	<br><br><input type="radio" name="radio" value="Sname" checked/>姓名
+	<input type="radio" name="radio" value="Ssex">性别
+	<input type="radio" name="radio" value="Sage" >年龄
+	<br><br>输入要修改的内容<input type="text" name="update" >
+	<br><input type="submit" name="submit" value="提交" class="button">  
+</form>
+</center>
+</body>
+</html>
+onclick="javaScript:alert('提交成功！！')"
